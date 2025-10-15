@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <title>Lämpötilamuunnin</title>
+  <link href="style_lampo.css" rel="stylesheet">
+</head>
+<body>
+  <h1>Lämpötilamuunnin</h1>
+<!-- muuntaja -->
+  <div class="converter">
+    <div class="temp-box">
+      <label id="labelLeft">Celsius</label>
+      <div class="input-with-unit">
+        <input type="text" id="leftInput">
+        <span id="unitLeft" class="unit">°C</span>
+      </div>
+    </div>
+
+    <button id="swapBtn" title="Vaihda suunta">↔</button>
+
+    <div class="temp-box">
+      <label id="labelRight">Fahrenheit</label>
+      <div class="input-with-unit">
+        <input type="text" id="rightInput" readonly>
+        <span id="unitRight" class="unit">°F</span>
+      </div>
+    </div>
+  </div>
+
+  <!--desimaalitarkkuus -->
+  <div class="precision-box">
+    <label for="decimalSelect">Desimaalitarkkuus:</label>
+    <select id="decimalSelect">
+      <option value="1">1 desimaali</option>
+      <option value="2" selected>2 desimaalia</option>
+      <option value="3">3 desimaalia</option>
+    </select>
+  </div>
+
+  <div id="errorMessage"></div>
+
+  <script src="script_lampo.js"></script>
+</body>
+</html>

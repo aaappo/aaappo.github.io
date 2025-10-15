@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <title>Kaverilista</title>
+  <link rel="stylesheet" href="style_lista.css">
+</head>
+<body>
+  <h1> Kaverilista</h1>
+
+  <input type="text" id="friendInput" placeholder="Syötä kaverin nimi" maxlength="20">
+  <button onclick="addFriend()">Lisää kaveri</button>
+
+  <br><br>
+  <label for="sortSelect">Järjestä: </label>
+  <select id="sortSelect" onchange="renderList()">
+    <option value="name">Nimen mukaan</option>
+    <option value="date">Lisäyspäivän mukaan</option>
+  </select>
+
+  <ul id="friendList"></ul>
+
+  <!-- Virheilmoitukset -->
+  <div id="errorMessage" role="alert" aria-live="assertive"></div>
+
+  <script src="script_lista.js"></script>
+</body>
+</html>
