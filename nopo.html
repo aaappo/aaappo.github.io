@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nöpö peli</title>
+    <link rel="stylesheet" href="nopo.css">
+</head>
+<body>
+    <section>
+        <div class="main">
+            <div class="left">
+                <h3>herkut: <span class="herkku-hinta">0</span></h3>
+                <img src="./nopo/IMG_7528.png" alt="" class="nopoClick" onclick="incrementHerkku()" draggable="false">
+            </div>
+
+            <div class="right">
+                <!-- Märkäruoka -->
+                <div class="upgrade" 
+                     onclick="ostaRuoka()" 
+                     onmouseenter="showInfo('märkäruoka', '+1 herkkua per klikkaus')" 
+                     onmouseleave="hideInfo()">
+                    <div class="left-section">
+                        <img src="./nopo/Näyttökuva 2025-11-05 172450.png" alt="" class="upgrade-img" draggable="false">
+                    </div>
+                    <div class="mid-section">
+                        <h4>märkäruoka</h4>
+                        <div class="hinta">
+                            <p>Hinta: <span class="ruoka-hinta">10</span></p>
+                            <img src="nopo/Näyttökuva 2025-11-05 092337.png" alt="" class="ruoka-img" draggable="false">
+                        </div>
+                    </div>
+                    <div class="right-section">
+                        <p>Taso: <span class="ruoka-level">0</span></p>
+                    </div>
+                </div>
+
+                <!-- Lelu -->
+                <div class="upgrade" 
+                     onclick="ostaLelu()" 
+                     onmouseenter="showInfo('lelu', '+2 herkkua sekunnissa')" 
+                     onmouseleave="hideInfo()">
+                    <div class="left-section">
+                        <img src="nopo/kassi_manguasi_suled3.jpg" alt="" class="upgrade-img" draggable="false">
+                    </div>
+                    <div class="mid-section">
+                        <h4>lelu</h4>
+                        <div class="hinta">
+                            <p>Hinta: <span class="lelu-hinta">100</span></p>
+                            <img src="nopo/Näyttökuva 2025-11-05 092337.png" alt="" class="ruoka-img" draggable="false">
+                        </div>
+                    </div>
+                    <div class="right-section">
+                        <p>Taso: <span class="lelu-level">0</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="info-box" id="infoBox"></div>
+
+
+    <script src="nopo.js"></script>
+</body>
+</html>
